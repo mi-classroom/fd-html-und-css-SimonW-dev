@@ -1,0 +1,30 @@
+:root {
+    /* colors */
+    --text-color: #000000;
+    --foreground: #ffffff;
+    --background: #e8e8e8;
+    --th-pink: #b62584;
+    --th-orange: #ea5b0c;
+    --th-red: #c60b0c;
+    --th-blue: #4285f4;
+
+    /* fonts */
+    --title: 31.5 bold;
+
+
+
+    /* sizes - probably dogshit way to do this */
+    --minimal-10px: 10px;
+    --small-12px: 12px;
+    --base-16px: 16px;
+    --large-20px: 20px;
+    --large-25px: 25px;
+    --large-31px: 31.5px;
+    --huge-40px: 40px;
+    --huge-50px: 50px;
+    --huge-63px: 63px;
+    --gargantuan-100px: 100px;
+
+    
+}
+
