@@ -1,0 +1,32 @@
+.keyword-search {
+  display: flex;
+
+  input{
+    flex-grow: 2;
+    padding: var(--half) var(--xs);
+    border: none;
+    border-top-left-radius: var(--xs);
+    border-bottom-left-radius: var(--xs);
+
+    &:focus, &:focus-visible, &:focus-within{
+      border: none;
+      outline: none;
+    }
+  }
+
+  button{
+    padding: var(--s);
+    border: none;
+    background-color: var(--color-white);
+    color: var(--color-white);
+    cursor: pointer;
+    border-top-right-radius: var(--xs);
+    border-bottom-right-radius: var(--xs);
+
+
+    .icon{
+      margin-right: 0;
+      color: var(--color-darkest);
+    }
+  }
+}

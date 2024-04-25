@@ -1,155 +1,195 @@
-/* Header
----------------------------------------------------------------------------- */
-.header {
-  background-color: var(--color-lightest);
-  margin-bottom: var(--xs);
-}
+/* Item List
+############################################################################ */
 
-
-/* Greeter
----------------------------------------------------------------------------- */
-.greeter {
-  background-color: var(--color-orange);
-  padding: var(--s);
-  border-radius: var(--xxs);
-  margin-bottom: var(--xxxl);
-
-  h1 {
-    color: var(--color-lightest);
+.item-list {
+  &.is-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
   }
 
-  p{
-    color: var(--color-lightest);
+  &.is-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-}
-
-/* Favorite Section
----------------------------------------------------------------------------- */
-.favorite-section {
-  h2 {
-    font-size: var(--m);
-  }
-}
-
-
-
-/* Fav List
----------------------------------------------------------------------------- */
-
-.grid-list {
-  margin-bottom: var(--m);
-  padding: var(--s);
-  list-style: none;
 
   li {
-    background-color: var(--color-lightest);
-    padding: var(--s) var(--m) var(--s) var(--s);
-    position: relative;
-    margin-bottom: var(--xxs);
-    border-radius: var(--xxs);
-
-    &::before {
-      position: absolute;
-      font-size: var(--xxl);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: var(--l);
-      top: 0;
-      bottom: 0;
+    &:hover {
+      background-color: var(--color-th-orange);
+      color: var(--color-white);
     }
 
-    p,
-    address,
-    a {
-      margin: 0;
-      font-style: normal;
-      margin-left: var(--xxxl);
-      line-height: var(--lh-tight);
+    position: relative;
+    padding: var(--s);
+    margin-right: var(--s);
+    margin-bottom: var(--s);
+    background-color: var(--color-white);
+    line-height: var(--lh-tight);
+    border-radius: var(--xs);
+
+    address {
+      font-size: var(--s);
+    }
+
+    &.has-icon {
+      padding-left: calc(var(--xxl) + var(--s));
     }
 
     p {
-      font-weight: var(--fw-medium);
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Main Header
+############################################################################ */
+.main-header {
+  padding: var(--m);
+}
+
+/* Hero
+############################################################################ */
+.hero {
+  padding-bottom: var(--xxxl);
+  margin: var(--m);
+  border-radius: var(--s);
+  background-color: var(--color-th-orange);
+  color: var(--color-white);
+
+  h2,
+  h3 {
+    font-size: var(--xl);
+  }
+
+  a {
+    color: var(--color-white);
+  }
+}
+
+/* Card Grid
+############################################################################ */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+
+  li {
+
+    &:hover {
+      background-color: var(--color-th-orange);
+      color: var(--color-white);
+
+      .tag-list {
+        li {
+          background-color: var(--color-grey-dark);
+          color: var(--color-white);
+        }
+      }
+    }
+
+    padding-bottom: var(--quarter);
+    margin-bottom: var(--s);
+    margin-right: var(--s);
+    background-color: var(--color-white);
+    border-radius: var(--s);
+
+    img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-top-left-radius: var(--s);
+      border-top-right-radius: var(--s);
+    }
+
+    figcaption {
+      padding: var(--s);
+    }
+
+    h3 {
+      padding: 0;
+      margin: 0;
+      font-weight: var(--fw-bold);
     }
 
     address {
-      font-size: smaller;
+      margin-bottom: var(--s);
     }
   }
 }
 
-/* Fav Item
----------------------------------------------------------------------------- */
+/* Tag List
+############################################################################ */
 
-.grid-item {
-  background-color: var(--color-lightest);
-  padding: var(--s) var(--m) var(--s) var(--s);
-  position: relative;
-  margin-bottom: var(--xxs);
-  border-radius: var(--xxs);
-
-  &::before {
-    position: absolute;
-    font-size: var(--xxl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: var(--l);
-    top: 0;
-    bottom: 0;
-  }
-
-  p,
-  address {
-    margin: 0;
-    font-style: normal;
-    margin-left: var(--xxxl);
-    line-height: var(--lh-tight);
-  }
-
-  p {
-    font-weight: var(--fw-medium);
-  }
-
-  address {
-    font-size: smaller;
+.tag-list {
+  li {
+    display: inline-block;
+    padding: var(--eighth) var(--half);
+    margin-bottom: 0;
+    background-color: var(--color-grey);
+    font-size: var(--s);
   }
 }
 
-/* Verlauf
----------------------------------------------------------------------------- */
-.verlauf-list {
-  margin-bottom: var(--m);
-  list-style: none;
-}
+/* Main Footer
+############################################################################ */
 
-/* Verlauf Container
----------------------------------------------------------------------------- */
-.verlauf-container {
-  /* padding: var(--s) var(--m) var(--s) var(--s); */
-  position: relative;
-  margin-bottom: var(--xxs);
-  border-radius: var(--xxs); 
-  /* max-width: 400px; */
-  background-color: var(--color-lightest);
+.main-footer {
+  padding: var(--m);
+  background-color: var(--color-grey-dark);
+  color: var(--color-white);
 
-  img {
-    max-width: 100%;
-    border-top-left-radius: var(--xxs);
-    border-top-right-radius: var(--xxs);
-  }
-
-  p {
-    padding-left: var(--s);
-    padding-bottom: var(--xs);
+  h2 {
+    margin-bottom: var(--quarter);
     font-size: var(--m);
-    font-weight: var(--fw-bold);
+  }
+
+  ul {
+    margin-bottom: var(--m);
+
+    li {
+      font-weight: var(--fw-light);
+
+      &::before {
+        margin-right: var(--half);
+        content: "»";
+        font-size: var(--xl);
+        font-weight: var(--fw-regular);
+        line-height: 90%;
+        vertical-align: bottom;
+      }
+    }
   }
 }
 
-/* Footer
----------------------------------------------------------------------------- */
-.footer-nav {
-  background-color: var(--color-light);
+/* Main Navigation
+############################################################################ */
 
+.main-navigation {
+  display: flex;
+  gap: var(--m);
+
+  .logo {
+    display: block;
+    flex-grow: 2;
+
+    img {
+      height: 50px;
+    }
+  }
+}
+
+.main-menu-trigger {
+  border: none;
+  margin-right: var(--xs);
+  background-color: var(--color-white);
+  color: var(--color-white);
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: var(--xl);
+    height: var(--eighth);
+    margin-bottom: var(--quarter);
+    background-color: var(--color-darkest);
+  }
 }
