@@ -1,0 +1,155 @@
+/* Header
+---------------------------------------------------------------------------- */
+.header {
+  background-color: var(--color-lightest);
+  margin-bottom: var(--xs);
+}
+
+
+/* Greeter
+---------------------------------------------------------------------------- */
+.greeter {
+  background-color: var(--color-orange);
+  padding: var(--s);
+  border-radius: var(--xxs);
+  margin-bottom: var(--xxxl);
+
+  h1 {
+    color: var(--color-lightest);
+  }
+
+  p{
+    color: var(--color-lightest);
+  }
+}
+
+/* Favorite Section
+---------------------------------------------------------------------------- */
+.favorite-section {
+  h2 {
+    font-size: var(--m);
+  }
+}
+
+
+
+/* Fav List
+---------------------------------------------------------------------------- */
+
+.grid-list {
+  margin-bottom: var(--m);
+  padding: var(--s);
+  list-style: none;
+
+  li {
+    background-color: var(--color-lightest);
+    padding: var(--s) var(--m) var(--s) var(--s);
+    position: relative;
+    margin-bottom: var(--xxs);
+    border-radius: var(--xxs);
+
+    &::before {
+      position: absolute;
+      font-size: var(--xxl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: var(--l);
+      top: 0;
+      bottom: 0;
+    }
+
+    p,
+    address,
+    a {
+      margin: 0;
+      font-style: normal;
+      margin-left: var(--xxxl);
+      line-height: var(--lh-tight);
+    }
+
+    p {
+      font-weight: var(--fw-medium);
+    }
+
+    address {
+      font-size: smaller;
+    }
+  }
+}
+
+/* Fav Item
+---------------------------------------------------------------------------- */
+
+.grid-item {
+  background-color: var(--color-lightest);
+  padding: var(--s) var(--m) var(--s) var(--s);
+  position: relative;
+  margin-bottom: var(--xxs);
+  border-radius: var(--xxs);
+
+  &::before {
+    position: absolute;
+    font-size: var(--xxl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: var(--l);
+    top: 0;
+    bottom: 0;
+  }
+
+  p,
+  address {
+    margin: 0;
+    font-style: normal;
+    margin-left: var(--xxxl);
+    line-height: var(--lh-tight);
+  }
+
+  p {
+    font-weight: var(--fw-medium);
+  }
+
+  address {
+    font-size: smaller;
+  }
+}
+
+/* Verlauf
+---------------------------------------------------------------------------- */
+.verlauf-list {
+  margin-bottom: var(--m);
+  list-style: none;
+}
+
+/* Verlauf Container
+---------------------------------------------------------------------------- */
+.verlauf-container {
+  /* padding: var(--s) var(--m) var(--s) var(--s); */
+  position: relative;
+  margin-bottom: var(--xxs);
+  border-radius: var(--xxs); 
+  /* max-width: 400px; */
+  background-color: var(--color-lightest);
+
+  img {
+    max-width: 100%;
+    border-top-left-radius: var(--xxs);
+    border-top-right-radius: var(--xxs);
+  }
+
+  p {
+    padding-left: var(--s);
+    padding-bottom: var(--xs);
+    font-size: var(--m);
+    font-weight: var(--fw-bold);
+  }
+}
+
+/* Footer
+---------------------------------------------------------------------------- */
+.footer-nav {
+  background-color: var(--color-light);
+
+}

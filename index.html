@@ -4,22 +4,23 @@
     <meta charset="utf-8">
     <title>Übersicht</title>
 
-    <!-- <link rel="stylesheet" href="./assets/styles/reset.css"> -->
-    <link rel="stylesheet" href="./assets/styles/base.css">
-    <link rel="stylesheet" href="./assets/styles/variables.css">
-    <link rel="stylesheet" href="./assets/styles/components.css">
+    <!-- load order for stylesheets is relevant! -->
+    <link rel="stylesheet" href="./assets/styles/reset.css">
     <link rel="stylesheet" href="./assets/styles/fonts.css">
     <link rel="stylesheet" href="./assets/styles/icons.css">
+    <link rel="stylesheet" href="./assets/styles/variables.css">
+    <link rel="stylesheet" href="./assets/styles/base.css">
+    <link rel="stylesheet" href="./assets/styles/components.css">
 
   </head>
   <body>
 
-    <header>
+    <header class="header">
       <img src="./assets/images/p4all.png" alt="Logo">
     </header>
 
     <main>
-      <section>
+      <section class="greeter">
         <h1>Willkommen zu Project4All</h1>
   
         <p>
@@ -38,20 +39,24 @@
       <section>
         <h2>Favoriten</h2>
   
-        <ul>
+        <ul class="grid-list">
           <li>
+            <span class="icon">folder</span>
             <p><b>Wie baue ich eine Präsentation auf?</b></p>
             <p>Monika Engelen</p>
           </li>
           <li>
+            <span class="icon">folder</span>
             <p><b>Wie erstelle ich eine Agenda?</b></p>
             <p>Raphaela Groten</p>
           </li>
           <li>
+            <span class="icon">folder</span>
             <p><b>Wie priorisiere ich (ein Backlog)</b></p>
             <p>Raphaela Groten</p>
           </li>
           <li>
+            <span class="icon">folder</span>
             <p><b>Wie halte ich einen Pitch?</b></p>
             <p>Monika Engelen</p>
           </li>
@@ -65,7 +70,7 @@
       <section>
         <h2>Von deinem ILU Schreibtisch</h2>
   
-        <ul>
+        <ul class="grid-list">
           <li><a href="https://youtu.be/dQw4w9WgXcQ?si=hqGAME2_1frY1JN_">Datenbanken 1</a></li>
           <li><a href="https://youtu.be/dQw4w9WgXcQ?si=hqGAME2_1frY1JN_">Kommunikation und Netze</a></li>
           <li><a href="https://youtu.be/dQw4w9WgXcQ?si=hqGAME2_1frY1JN_">Paradigmen der Programmierung</a></li>
@@ -78,24 +83,18 @@
       <section>
         <h2>Verlauf</h2>
   
-        <ul>
-          <li>
-            <div style="max-width: 400px;">
-              <img src="./images/agenda.jpg" alt="Agenda" style="max-width: 100%;">
-              <p>Wie erstelle ich eine Agenda?</p>
-            </div>
+        <ul class="verlauf-list">
+          <li class="verlauf-container">
+            <img src="./images/agenda.jpg" alt="Agenda">
+            <p>Wie erstelle ich eine Agenda?</p>
           </li>
-          <li>
-            <div style="max-width: 400px;">
-              <img src="./images/business-idea.jpg" alt="Business Idea" style="max-width: 100%;">
-              <p>Wie baue ich eine Präsentation auf?</p>
-            </div>
+          <li class="verlauf-container">
+            <img src="./images/business-idea.jpg" alt="Business Idea">
+            <p>Wie baue ich eine Präsentation auf?</p>
           </li>
-          <li>
-            <div style="max-width: 400px;">
-              <img src="./images/team-arbeit.jpg" alt="Team Arbeit" style="max-width: 100%;">
-              <p>Wie arbeite ich in einem Team?</p>
-            </div>
+          <li class="verlauf-container">
+            <img src="./images/team-arbeit.jpg" alt="Team Arbeit">
+            <p>Wie arbeite ich in einem Team?</p>
           </li>
         </ul>
       </section>
@@ -103,7 +102,11 @@
 
   <footer>
     <nav>
-      <div>
+
+
+  <div>
+
+      <div class="container">
         <h3>Barrierefreiheit</h3>
 
         <ul>
@@ -112,7 +115,7 @@
         </ul>
       </div>
 
-      <div>
+      <div class="container">
         <h3>Feedback</h3>
 
         <ul>
@@ -122,7 +125,7 @@
         </ul>
       </div>
 
-      <div>
+      <div class="container">
         <h3>Rechtliche Informationen</h3>
 
         <ul>
@@ -131,6 +134,9 @@
           <li>Datenschutzrichtlinien</li>
         </ul>
       </div>
+
+
+    </div>
     </nav>
 
   </footer>
